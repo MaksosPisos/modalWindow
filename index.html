@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <button class="btn btn-gradient">
+        Получить миллион
+    </button>
+    <div class="modal">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.68701" width="27.3715" height="3.8" transform="rotate(45 2.68701 0)" fill="#828282" />
+            <rect x="0.831299" y="19.5566" width="27.3715" height="3.8" transform="rotate(-45 0.831299 19.5566)"
+                fill="#828282" />
+        </svg>
+        <h3>
+            Чтобы получить деньги вы должны нажать крестик в течении 10 секунд, иначе окно закроется автоматически и вы не получите ничего :( 
+        </h3>
+        <p class="js-timer">
+           
+        </p>
+        <p class="text">
+            *Клик за границы окна автоматически засчитывается как поражение
+        </p>
+    </div>
+    <div class="overlay" id="overlay-modal">
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

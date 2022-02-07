@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #dddcdc;
+}
+.btn{
+    background: #fff;
+    padding: 1rem 3rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 6px;
+    position: relative;
+    /* max-width: 150px;
+    max-height: 50px; */
+    transition: .3s ease;
+    border: 2px solid transparent;
+}
+.btn-gradient::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    filter: blur(10px);
+    transform: translateY(0px) scale(1.1);
+    transition: .3s ease;
+}
+
+.btn-gradient:nth-child(1):before {
+    background: linear-gradient(90deg, #F7941D 0%, #27AAE1 100%);
+    opacity: .3;
+    z-index: -1;
+}
+.btn-gradient:hover:before {
+    transform: translateX(1px) scale(1.1);
+    opacity: .8;
+}
+.btn-gradient:focus {
+    background: #00093C;
+    color: #fff;
+}
+.btn-gradient:focus:nth-child(1):before {
+    opacity: 0;
+}
+
+/* подложка */
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    transition: .3s ease;
+}
+/* модальное окно */
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 400px;
+    position: fixed;
+    z-index: 20;
+    transition: .3s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    row-gap: 1.5rem;
+
+}
+.modal svg {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: .15s ease;
+
+    
+}
+.modal svg rect {
+    transition: .3s ease;
+}
+.modal svg:hover rect{
+    fill: #00093C;
+}
+
+.overlay.active,
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 300;
+}
